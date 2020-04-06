@@ -1,0 +1,94 @@
+.screenContent {
+    background-color: var(--color-background);
+    background-image: url("../images/bg5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.screenHeader {
+    height: 20%;
+}
+
+.screenHeaderTitle {
+    background-color: var(--color-emphasis-alt);
+    color: var(--color-background);
+    /* padding: 2%;
+    margin: 2%; */
+    padding: 30px;
+    margin: 40px;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.screenDescription {
+    margin: 40px 40px 40px 40px;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    height: 100%
+}
+
+.contentMainPanel {
+    display: flex;
+    flex-direction: row;
+    margin: 150px 250px 0 250px;
+}
+
+.contentTextPanel {
+    background-color: var(--color-background-alt);
+    padding: 20px;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.contentImagePanel {
+    padding: 20px;
+    background-color: var(--color-background-alt);
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contentTextPanel {
+    background-color: var(--color-background-alt);
+    color: var(--color-text-content);    
+}
+
+.squareImage {
+    max-width: 240px;
+    max-height: 240px;
+}
+
+.contentPersonalDataContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.contentPersonalDataColumn {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.personalDataIcon {
+    height: 15px;
+    padding: 3px;
+    font-size: 11px;
+}
+
+.contentTitle {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 60px;
+}
+
+.contentDescription {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
