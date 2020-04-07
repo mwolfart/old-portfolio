@@ -1,53 +1,52 @@
-.sideBar {
+/* TODO: No camel case */
+.sidebar {
     transition: width 1s ease-in;
     overflow-x: hidden;
+    position: absolute;
+    background-color: var(--color-emphasis);
+    transition: width 0.5s ease-in 0.25s;
+    height: 100%;
+    width: 80px;
 }
 
-.sideBarItemClicked {
-    background-color: #bfbfbf50;
+.sidebar--expanded {
+    transition-delay: 0s;
+    transition-timing-function: ease-out;
+    width: 300px;
 }
 
-.sideBarItem button,
-.sideBarItemClicked button {
+.sidebar-item__button {
     background-color: Transparent;
     cursor: pointer;
     outline: none;
+    border: none;
     width: 100%;
     padding: 10px 15px 10px 15px;
     margin: 10px 0 10px 0;
-    text-align: left;
     display: flex;
     flex-direction: row;
 }
 
-.sideBarItem button div,
-.sideBarItemClicked button div {
+.sidebar-item__button--clicked {
+    background-color: #bfbfbf50;
+}
+
+.sidebar-item__button-text {
+    white-space: nowrap;
     padding-left: 10px;
     margin: auto 0 auto 0;
     color: var(--color-text-emphasis);
     font-family: 'Calibri', 'Helvetica Neue', sans-serif;
     font-weight: 500;
     font-size: x-large;
+    transition: opacity 0.25s ease-in 0s;
+    opacity: 0%;
 }
 
-.sideBar {
-    /* background-image: url("../images/red.png");
-    background-repeat: repeat; */
-    background-color: var(--color-emphasis);
-    transition: width 1s ease-in;
-    width: 90px;
-}
-
-.sideBarExpanded {
-    width: 400px;
-}
-
-.sideBar button {
-    background-color: Transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 15px;
+.sidebar-item__button-text--expanded {
+    transition-delay: 0.5s;
+    transition-timing-function: ease-out;
+    opacity: 100%;
 }
 
 ul {

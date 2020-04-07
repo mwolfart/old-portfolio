@@ -7,22 +7,28 @@ class SideBarItem extends React.Component {
   render() {
     const itemInfo = this.props.info;
     const showTitle = this.props.showTitle;
-    const className = this.props.isSelected
-      ? "sideBarItemClicked"
-      : "sideBarItem";
+
+    const buttonClass = "sidebar-item__button " + (
+      this.props.isSelected
+      ? "sidebar-item__button--clicked"
+      : ""
+    );
+
+    const buttonTextClass = "sidebar-item__button-text " + (
+      showTitle ? 
+      "sidebar-item__button-text--expanded" 
+      : "");
 
     return (
-      <div className={className}>
-        <button onClick={() => this.props.clickItem(itemInfo.id)}>
-          <FontAwesomeIcon
-            icon={itemInfo.icon}
-            size="3x"
-            color="#FFFFFF"
-            fixedWidth
-          />
-          {showTitle && <div>{itemInfo.title}</div>}
-        </button>
-      </div>
+      <button onClick={() => this.props.clickItem(itemInfo.id)} className={buttonClass}>
+        <FontAwesomeIcon
+          icon={itemInfo.icon}
+          size="3x"
+          color="#FFFFFF"
+          fixedWidth
+        />
+        {<div className={buttonTextClass}>{itemInfo.title}</div>}
+      </button>
     );
   }
 }
@@ -69,8 +75,8 @@ export class SideBar extends React.Component {
     this.createMenuItems(this.props.menuItems);
 
     return (
-      <div className={ "sideBar " + (this.state.expanded ? "sideBarExpanded" : "")}>
-        <button onClick={() => this.toggleExpanded()}>
+      <div className={ "sidebar " + (this.state.expanded ? "sidebar--expanded" : "")}>
+        <button onClick={() => this.toggleExpanded()} className="sidebar-item__button">
           <FontAwesomeIcon icon={faBars} size="3x" color="#FFFFFF" fixedWidth />
         </button>
         <ul>{this.state.items}</ul>

@@ -36,7 +36,7 @@ export class MainCanvas extends React.Component {
   
     render() {
       return (
-        <div className="mainCanvas">
+        <div className="main-canvas">
           <SideBar
             menuItems={this.state.screens}
             menuSelectedItem={this.state.curScreenId}

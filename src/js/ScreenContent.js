@@ -5,18 +5,6 @@ import { ModulePlayer } from "./screens/ModulePlayer";
 import { MillenialsChallenge } from "./screens/MillenialsChallenge";
 import { PiggyBank } from "./screens/PiggyBank";
 
-class ScreenHeader extends React.Component {
-  render() {
-    return(
-      <div className="screenHeader">
-        <div className="screenHeaderTitle">
-          { this.props.title }
-        </div>
-      </div>
-    );
-  }
-}
-
 class ScreenDescription extends React.Component {
   getScreenClass(screenId) {
     switch(screenId) {
@@ -34,7 +22,7 @@ class ScreenDescription extends React.Component {
 
   render() {
     return(
-      <div className="screenDescription">
+      <div className="screen-description">
         { this.getScreenClass(this.props.screenId) }
       </div>
     );
@@ -46,7 +34,7 @@ export class ScreenContent extends React.Component {
     const currentScreen = this.props.screen;
 
     return(
-      <div className="screenContent">
+      <div className="screen-content">
         <ScreenDescription
           screenId={ currentScreen.id }
         />
