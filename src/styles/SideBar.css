@@ -5,7 +5,7 @@
     position: absolute;
     background-color: var(--color-emphasis);
     transition: width 0.5s ease-in 0.25s;
-    height: 100%;
+    height: 100vh;
     width: 80px;
 }
 

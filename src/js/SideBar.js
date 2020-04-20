@@ -25,6 +25,7 @@ class SideBarItem extends React.Component {
           icon={itemInfo.icon}
           size="3x"
           color="#FFFFFF"
+          className="sidebar-item__icon"
           fixedWidth
         />
         {<div className={buttonTextClass}>{itemInfo.title}</div>}
