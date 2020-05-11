@@ -18,7 +18,17 @@
 .screen-content__main-panel {
     display: flex;
     flex-direction: row;
-    margin: 150px 250px 150px 250px;
+    margin: 150px 170px 150px calc(170px + 65px);
+}
+
+.screen-content__selected-screen {
+    transition: opacity 0.25s ease-in 0s;
+    opacity: 1;
+}
+
+.screen-content__selected-screen--hidden {
+    transition-delay: 0.25s;
+    opacity: 0;
 }
 
 .screen-content__text-panel {
@@ -44,7 +54,7 @@
     align-items: center;
 }
 
-.screen-content__arrow-right {
+.screen-content__arrow-icon {
     vertical-align: middle;
     color: var(--color-background);
 }
@@ -78,13 +88,21 @@
 
 .screen-content__text-title {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 500;
     line-height: 60px;
 }
 
 .screen-content__text-description {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    padding-bottom: 30px;
+    font-size: 18px;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.screen-content__arrow-button {
+    background-color: Transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
 }
