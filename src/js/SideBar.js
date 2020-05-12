@@ -3,47 +3,20 @@ import "../styles/SideBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faChevronRight, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-/*
-class SideBarItem extends React.Component {
+class SideBarButton extends React.Component {
   render() {
-    const itemInfo = this.props.info;
-    const showTitle = this.props.showTitle;
-
-    const buttonClass = "sidebar-item__button " + (
-      this.props.isSelected
-      ? "sidebar-item__button--clicked"
-      : ""
-    );
-
-    const buttonTextClass = "sidebar-item__button-text " + (
-      showTitle ? 
-      "sidebar-item__button-text--expanded" 
-      : "");
-
-    return (
-      <button onClick={() => this.props.clickItem(itemInfo.id)} className={buttonClass}>
+    return(
+      <button onClick={() => this.props.clickPage(this.props.page)} className="sidebar-button sidebar-button-category">
         <FontAwesomeIcon
-          icon={itemInfo.icon}
-          size="2x"
-          color="#FFFFFF"
-          className="sidebar-item__icon"
+          icon={ faChevronRight }
           fixedWidth
+          className="sidebar-category-icon-hidden"
         />
-        {<div className={buttonTextClass}>{itemInfo.title}</div>}
+      {<div className="sidebar-category__title">{this.props.page.title}</div>}
       </button>
     );
   }
 }
-*/
-
-/*
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
-*/
 
 class SideBarCategory extends React.Component {
   constructor(props) {
@@ -61,7 +34,11 @@ class SideBarCategory extends React.Component {
     for (const page of pageArray) {
       pageElements.push(
         <li key={page.title}>
-          <div className="sidebar-page__title">{ page.title }</div>
+          <button 
+            className="sidebar-button sidebar-page__title"
+            onClick={ () => this.props.clickPage(page) }
+            >{ page.title }
+          </button>
         </li>
       );
     }
@@ -85,7 +62,6 @@ class SideBarCategory extends React.Component {
             icon={ (this.state.expanded ? faChevronDown : faChevronRight) }
             color="#FFFFFF"
             fixedWidth
-            className={ (!this.props.pages ? "sidebar-category-icon-hidden" : "") }
           />
         {<div className="sidebar-category__title">{this.props.title}</div>}
         </button>
@@ -111,15 +87,30 @@ export class SideBar extends React.Component {
     this.props.menuPageSelectFn(screenTitle);
   }
 
+  createItem(item) {
+    if (item.pages) {
+      return (
+        <SideBarCategory
+          title={item.title}
+          pages={item.pages}
+          clickPage={page => this.clickPage(page)} 
+        />
+      );
+    } else {
+      return (
+        <SideBarButton
+          page={item}
+          clickPage={page => this.clickPage(page)} 
+        />
+      );
+    }
+  }
+
   createMenuItems(categories) {
     for (const category of categories) {
       this.state.items.push(
         <li key={category.title}>
-          <SideBarCategory
-            title={category.title}
-            pages={category.pages}
-            clickPage={screenTitle => this.clickPage(screenTitle)} 
-          />
+          { this.createItem(category) }
         </li>
       )
     }
