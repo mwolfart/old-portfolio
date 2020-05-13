@@ -20,7 +20,7 @@ export class MainCanvas extends React.Component {
     this.state = {
       screens: this.getScreensData(),
       curPage: { title: "Home", class: Home },
-      screenTransition: { performTransition: false }
+      screenTransition: false
     };
   }
 
@@ -49,10 +49,12 @@ export class MainCanvas extends React.Component {
   selectPage(page) {
     const curPage = (page && page.class) ? page : this.screens[0];
 
-    this.setState({
-      curPage,
-      screenTransition: { performTransition: true }
-    });
+    this.setState({ screenTransition: true });
+
+    clearTimeout(this.screenChangeTimeout);
+    this.screenChangeTimeout = setTimeout(() => {
+      this.setState({ curPage, screenTransition: false });
+    }, 300);
   }
 
   render() {
@@ -60,7 +62,6 @@ export class MainCanvas extends React.Component {
       <div className="main-canvas">
         <SideBar
           menuItems={this.state.screens}
-          menuSelectedItem={this.state.curScreenTitle}
           menuPageSelectFn={page => this.selectPage(page)}
         />
         <ScreenContent 

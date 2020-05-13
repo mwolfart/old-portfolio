@@ -16,14 +16,10 @@ export class ScreenContent extends React.Component {
 
   render() {
     const screen = this.props.screen;
-    const screenTransition = this.props.screenTransition;
     
     let screenClass = "screen-content__selected-screen";
-    if (screenTransition.performTransition) {
-      screenClass += "--hidden" 
-      setTimeout(() => { 
-        screenTransition.performTransition = false; 
-      }, 100); 
+    if (this.props.screenTransition) {
+      screenClass += " screen-content__selected-screen--hidden" 
     }
 
     return(

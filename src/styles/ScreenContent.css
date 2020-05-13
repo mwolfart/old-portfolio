@@ -22,12 +22,12 @@
 }
 
 .screen-content__selected-screen {
-    transition: opacity 0.25s ease-in 0s;
+    transition: opacity 0.25s ease-in 0.25s;
     opacity: 1;
 }
 
 .screen-content__selected-screen--hidden {
-    transition-delay: 0.25s;
+    transition-delay: 0s;
     opacity: 0;
 }
 
