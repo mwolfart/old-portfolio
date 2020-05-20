@@ -1,9 +1,8 @@
 import React from "react";
-import "../../styles/ScreenContent.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleRight, faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
-class ProjectSummaryPage extends React.Component {
+export class MillenialsChallenge extends React.Component {
     render() {
         return (
             <div className="screen-content__main-panel">
@@ -30,7 +29,7 @@ class ProjectSummaryPage extends React.Component {
                     <img src={require("../../images/mc3.png")} alt="Profile" className="image-rectangular-big" />
                 </div>
                 <div className="screen-content__arrow-container">
-                    <button onClick={() => this.props.changePageFn(1)} className="screen-content__arrow-button" title="Gameplay video">
+                    <button onClick={() => this.props.selectPageFn(MillenialsChallengeVideo)} className="screen-content__arrow-button" title="Gameplay video">
                         <FontAwesomeIcon size="3x" icon={faArrowCircleRight} fixedWidth className="screen-content__arrow-icon"/>
                     </button>
                 </div>
@@ -39,12 +38,12 @@ class ProjectSummaryPage extends React.Component {
     }
 }
 
-class ProjectVideoPage extends React.Component {
+class MillenialsChallengeVideo extends React.Component {
     render() {
         return(
             <div className="screen-content__main-panel">
                 <div className="screen-content__arrow-container">
-                    <button onClick={() => this.props.changePageFn(0)} className="screen-content__arrow-button" title="Project description">
+                    <button onClick={() => this.props.selectPageFn(MillenialsChallenge)} className="screen-content__arrow-button" title="Project description">
                         <FontAwesomeIcon size="3x" icon={faArrowCircleLeft} fixedWidth className="screen-content__arrow-icon"/>
                     </button>
                 </div>
@@ -53,15 +52,5 @@ class ProjectVideoPage extends React.Component {
                 </div>
             </div>
         )
-    }
-}
-
-export class MillenialsChallenge extends React.Component {
-    render() {
-        return (
-            <div>
-                <ProjectSummaryPage active={ this.props.currentPage === 0 } changePageFn={ this.props.changePageFn } />
-            </div>
-        );
     }
 }

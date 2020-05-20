@@ -80,11 +80,11 @@ export class SideBar extends React.Component {
     };
   }
 
-  clickPage(screenTitle) {
+  clickPage(page) {
     this.setState({
       items: []
     });
-    this.props.menuPageSelectFn(screenTitle);
+    this.props.menuPageSelectFn(page);
   }
 
   createItem(item) {

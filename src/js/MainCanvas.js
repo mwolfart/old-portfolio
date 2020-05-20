@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/MainCanvas.css";
 import { SideBar } from "./SideBar";
-import { ScreenContent } from "./ScreenContent";
 import {
   faHome,
   faGamepad,
@@ -19,7 +18,7 @@ export class MainCanvas extends React.Component {
 
     this.state = {
       screens: this.getScreensData(),
-      curPage: { title: "Home", class: Home },
+      curPage: Home,
       screenTransition: false
     };
   }
@@ -47,27 +46,38 @@ export class MainCanvas extends React.Component {
   }
 
   selectPage(page) {
-    const curPage = (page && page.class) ? page : this.screens[0];
-
+    clearTimeout(this.transitionTimeout);
     this.setState({ screenTransition: true });
 
-    clearTimeout(this.screenChangeTimeout);
-    this.screenChangeTimeout = setTimeout(() => {
-      this.setState({ curPage, screenTransition: false });
+    this.transitionTimeout = setTimeout(() => {
+      this.setState({ 
+        curPage: page || this.screens[0],
+        screenTransition: false
+      });
     }, 300);
   }
 
   render() {
+    const Screen = this.state.curPage;
+
+    let screenClass = "screen-content__selected-screen";
+    if (this.state.screenTransition) {
+      screenClass += " screen-content__selected-screen--hidden" 
+    }
+
     return (
       <div className="main-canvas">
         <SideBar
           menuItems={this.state.screens}
-          menuPageSelectFn={page => this.selectPage(page)}
+          menuPageSelectFn={page => this.selectPage(page.class)}
         />
-        <ScreenContent 
-          screen={ this.state.curPage }
-          screenTransition={ this.state.screenTransition }
-        />
+        <div className="screen-content">
+          <div className={ screenClass }>
+            <Screen
+              selectPageFn={ page => this.selectPage(page) }
+            />
+          </div>
+        </div>
       </div>
     );
   }
