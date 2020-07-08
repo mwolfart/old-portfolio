@@ -6,7 +6,7 @@ export class MillenialsChallenge extends React.Component {
     render() {
         return (
             <div className="screen-content__main-panel">
-                <div className="screen-content__text-panel">
+                <div className="screen-content__text-panel screen-content__text-panel--left-block">
                     <div className="screen-content__text-title">Millenial's Challenge</div>
                     <div className="screen-content__text-description">
                         This is a Unity game developed along with Juliano Carmona Ferreira Jardim as a college assignment. 
@@ -16,12 +16,6 @@ export class MillenialsChallenge extends React.Component {
                     <div className="screen-content__text-description">
                         Besides Unity, the team also used Blender in order to create some 3D models (although most of them are taken from the Unity store), as well as BitBucket for system versioning.
                     </div>
-                    <div className="screen-content__text-title">Repository & download</div>
-                    <div className="screen-content__text-description">
-                        Version 0.4 of the game is available at <a href="https://drive.google.com/open?id=1oZiKPezKUxzMQTA6vb8oKWr4-RamezQ_">the author's Google Drive</a>.
-                    <br/><br/>
-                        The game is also available at its <a href="https://bitbucket.org/mwolfart/pcg-millenials-challenge-2/src/master/">BitBucket repository</a>.
-                    </div>
                 </div>
                 <div className="screen-content__right-panel">
                     <img src={require("../../images/mc1.png")} alt="Profile" className="image-rectangular-big" />
@@ -29,7 +23,7 @@ export class MillenialsChallenge extends React.Component {
                     <img src={require("../../images/mc3.png")} alt="Profile" className="image-rectangular-big" />
                 </div>
                 <div className="screen-content__arrow-container">
-                    <button onClick={() => this.props.selectPageFn(MillenialsChallengeVideo)} className="screen-content__arrow-button" title="Gameplay video">
+                    <button onClick={() => this.props.selectPageFn(MillenialsChallengePage2)} className="screen-content__arrow-button" title="Gameplay video">
                         <FontAwesomeIcon size="3x" icon={faArrowCircleRight} fixedWidth className="screen-content__arrow-icon"/>
                     </button>
                 </div>
@@ -38,7 +32,7 @@ export class MillenialsChallenge extends React.Component {
     }
 }
 
-class MillenialsChallengeVideo extends React.Component {
+class MillenialsChallengePage2 extends React.Component {
     render() {
         return(
             <div className="screen-content__main-panel">
@@ -48,7 +42,19 @@ class MillenialsChallengeVideo extends React.Component {
                     </button>
                 </div>
                 <div className="screen-content__text-panel">
-                    TEXT
+                    <div className="screen-content__text-title">Gameplay</div>
+                    <div className="screen-content__text-description">
+                        Below is a video showing the gameplay of Millenial's Challenge level 01. Gameplay videos for level 02 and 03 can be found <a href="https://youtu.be/GuPiVk4cFJg">here</a> and <a href="https://youtu.be/jyRXoygfuSY">here</a>, respectively.
+                    </div>
+                    <div className="screen-content__text-video">
+                        <iframe width="560" height="250" src="https://www.youtube.com/embed/XQX37-c8pZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div className="screen-content__text-title">Repository & download</div>
+                    <div className="screen-content__text-description">
+                        Version 0.4 of the game is available at <a href="https://drive.google.com/open?id=1oZiKPezKUxzMQTA6vb8oKWr4-RamezQ_">the author's Google Drive</a>.
+                    <br/><br/>
+                        The game is also available at its <a href="https://bitbucket.org/mwolfart/pcg-millenials-challenge-2/src/master/">BitBucket repository</a>, however some of the assets are not present due to storage issues (they were stored separately in Google Drive). If you want to build the project in your machine, please contact the authors.
+                    </div>
                 </div>
             </div>
         )

@@ -107,6 +107,9 @@ export class SideBar extends React.Component {
   }
 
   createMenuItems(categories) {
+    // TODO this should not happen here
+    this.state.items.length = 0;
+
     for (const category of categories) {
       this.state.items.push(
         <li key={category.title}>
