@@ -16,6 +16,9 @@ import { CowMaze } from "./screens/CowMaze";
 import { PatasDadas } from "./screens/PatasDadas";
 import { PiggyBank } from "./screens/PiggyBank";
 import { LearnIt } from "./screens/LearnIt";
+import { Compiler } from "./screens/Compiler";
+import { AITools } from "./screens/AITools";
+import { OSTools } from "./screens/OSTools";
 // import {} from "./screens/";
 
 export class MainCanvas extends React.Component {
@@ -43,9 +46,9 @@ export class MainCanvas extends React.Component {
         { title: "LearnIt", class: LearnIt }
       ] },
       { title: "Shell applications", pages: [
-        { title: "OS Tools", class: undefined },
-        { title: "AI Tools", class: undefined },
-        { title: "Code Compiler", class: undefined }
+        { title: "OS Tools", class: OSTools },
+        { title: "AI Tools", class: AITools },
+        { title: "Code Compiler", class: Compiler }
       ] }
     ];
 
