@@ -9,11 +9,11 @@ export class PatasDadas extends React.Component {
                 <div className="screen-content__text-panel screen-content__text-panel--left-block">
                     <div className="screen-content__text-title">Patas Dadas internal system</div>
                     <div className="screen-content__text-description">
-                        This was a small project made for the course INF01022. It was supposed to be an internal management system for the local Porto Alegre NGO Patas Dadas, so that they could manage their supplies and pets available for adoption. The website was, however, discontinued.
+                        This was a small project made for the course INF01022 (Laboratório de Sistemas de Software). It was supposed to be an internal management system for the local Porto Alegre NGO Patas Dadas, so that they could manage their supplies and pets available for adoption. The website was, however, discontinued.
                     </div>
                     <div className="screen-content__text-title">Tools used</div>
                     <div className="screen-content__text-description">
-                        The project is a Java Spring website with a jQuery/JS frontend. Bootstrap was used in order to help with teh website design. The team was formed by the alumni Jéssica Rocha, Taiane Oliveira and me, with Jéssica being mainly responsible by the backend and me and Taiane by the frontend (despite all teammates working occasionally in all parts of the application). 
+                        The project is a Java Spring website with a jQuery/JS frontend. Bootstrap was used in order to help with the website design. The team was formed by the alumni Jéssica Rocha, Taiane Oliveira and me, with Jéssica being mainly responsible by the backend while Taiane and I worked on the frontend (despite all teammates working occasionally in all parts of the application). 
                     </div>
                     <div className="screen-content__text-title">Repository & Application</div>
                     <div className="screen-content__text-description">

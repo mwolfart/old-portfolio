@@ -7,8 +7,8 @@ export class CowMaze extends React.Component {
                 <div className="screen-content__text-panel screen-content__text-panel--left-block">
                     <div className="screen-content__text-title">The Homogeneous Cow Maze</div>
                     <div className="screen-content__text-description">
-                        This is a C++ project developed for the course INF01047. It's a 3D game based on a 1989 game called "Chip's Challenge" (just like Millenial's Challenge), developed using only the C++ language and the OpenGL library. The goal of the project was to understand how OpenGL library works and how to render graphics with it.
-                        As for the game itself, the goal is to collect all baby cows (light-blue) in each level and head to the cow mother, while avoiding obstacles and making use of tools such as keys and movable blocks.
+                        This is a C++ project developed for the course INF01047 (Computação Gráfica). It is a 3D game based on the 1989 game called "Chip's Challenge" (just like Millenial's Challenge), developed using only the C++ language and the OpenGL library. The goal of the project was to understand how OpenGL library works and how to render graphics with it.
+                        As for the game itself, the goal is to collect all baby cows (light-blue) in each level and go to the "Mother Cow", while avoiding obstacles and making use of tools such as keys and movable blocks.
                     </div>
                     <div className="screen-content__text-title">Tools used</div>
                     <div className="screen-content__text-description">

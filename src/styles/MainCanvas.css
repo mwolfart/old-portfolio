@@ -23,7 +23,8 @@
 .screen-content__main-panel {
     display: flex;
     flex-direction: row;
-    margin: 150px 250px 150px calc(250px + 65px);
+    margin: 95px 250px 95px calc(250px + 65px);
+    min-height: 600px;
 }
 
 .screen-content__selected-screen {

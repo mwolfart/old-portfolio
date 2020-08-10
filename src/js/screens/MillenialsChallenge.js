@@ -10,11 +10,11 @@ export class MillenialsChallenge extends React.Component {
                     <div className="screen-content__text-title">Millenial's Challenge</div>
                     <div className="screen-content__text-description">
                         This is a Unity game developed along with Juliano Carmona Ferreira Jardim as a college assignment. 
-                        The game is a 3D third person puzzler based on a 1989 game called "Chip's Challenge", developed for Windows 95 as part of Microsoft Entertainment Pack. The player must collect Wi-Fi icons throughout the level and reach its exit, represented by a smartphone. There are many obstacles in each level, such as enemies, pushable blocks, traps, locked doors, etc. which provide more fun to the game.
+                        The game is a 3D third person puzzler based on a 1989 game called "Chip's Challenge" (developed for Windows 95 as part of Microsoft Entertainment Pack). The player must collect Wi-Fi icons throughout the level and reach its exit, represented by a smartphone. There are many obstacles in each level, such as enemies, pushable blocks, traps, locked doors, etc. which provide more fun to the game.
                     </div>
                     <div className="screen-content__text-title">Tools used</div>
                     <div className="screen-content__text-description">
-                        Besides Unity, the team also used Blender in order to create some 3D models (although most of them are taken from the Unity store), as well as BitBucket for system versioning.
+                        Besides Unity and C#, the team also used Blender in order to create some 3D models (although most of them were taken from the Unity store), as well as BitBucket for system versioning.
                     </div>
                 </div>
                 <div className="screen-content__right-panel">
