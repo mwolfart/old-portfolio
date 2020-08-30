@@ -4,7 +4,7 @@ import { faArrowCircleRight, faArrowCircleLeft } from "@fortawesome/free-solid-s
 import airacers1 from "../images/airacers1.png";
 import airacers2 from "../images/airacers2.png";
 
-export const AITools = (props) =>
+export const AITools = ({ selectPageFn }) =>
     <div className="screen-content__main-panel">
         <div className="screen-content__text-panel screen-content__text-panel--left-block">
             <div className="screen-content__text-title">AI Tools</div>
@@ -22,16 +22,16 @@ export const AITools = (props) =>
             <img src={airacers2} alt="AI Racers phase 2" className="image-rectangular-big" />
         </div>
         <div className="screen-content__arrow-container">
-            <button onClick={() => props.selectPageFn(AIToolsPage2)} className="screen-content__arrow-button" title="Next">
+            <button onClick={() => selectPageFn(AIToolsPage2)} className="screen-content__arrow-button" title="Next">
                 <FontAwesomeIcon size="3x" icon={faArrowCircleRight} fixedWidth className="screen-content__arrow-icon"/>
             </button>
         </div>
     </div>;
 
-export const AIToolsPage2 = (props) =>
+export const AIToolsPage2 = ({ selectPageFn }) =>
     <div className="screen-content__main-panel">
         <div className="screen-content__arrow-container">
-            <button onClick={() => props.selectPageFn(AITools)} className="screen-content__arrow-button" title="Back">
+            <button onClick={() => selectPageFn(AITools)} className="screen-content__arrow-button" title="Back">
                 <FontAwesomeIcon size="3x" icon={faArrowCircleLeft} fixedWidth className="screen-content__arrow-icon"/>
             </button>
         </div>

@@ -3,7 +3,7 @@ import hcm1 from "../images/hcm1.png";
 import hcm2 from "../images/hcm2.png";
 import hcm3 from "../images/hcm3.png";
 
-export const CowMaze = (props) =>
+export const CowMaze = () =>
     <div className="screen-content__main-panel">
         <div className="screen-content__text-panel screen-content__text-panel--left-block">
             <div className="screen-content__text-title">The Homogeneous Cow Maze</div>

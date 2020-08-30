@@ -4,7 +4,7 @@ import { faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import profile from "../images/profile.jpg";
 
-export const Home = (props) =>
+export const Home = () =>
     <div className="screen-content__main-panel">
         <div className="screen-content__text-panel screen-content__text-panel--left-block">
             <div className="screen-content__text-title">Hello, and welcome to my page!</div>
@@ -14,7 +14,7 @@ export const Home = (props) =>
             <div className="screen-content__text-description">I am a computer science undergraduate who likes front-end stuff and, in the spare time, I like playing games, singing and looking for new music. Despite preferring front-end I also like to explore different areas of programming and learn new technologies.</div>
         </div>
         <div className="screen-content__right-panel">
-            <img src={profile} alt="Profile picture" className="image-square" />
+            <img src={profile} alt="Profile" className="image-square" />
             { "Murilo Wolfart" }
             <div className="screen-content__personal-data-container">
                 <div className="screen-content__personal-data-column">

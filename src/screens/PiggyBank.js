@@ -1,6 +1,6 @@
 import React from "react";
 
-export const PiggyBank = (props) =>
+export const PiggyBank = () =>
     <div className="screen-content__main-panel">
         <div className="screen-content__text-panel">
             <div className="screen-content__text-title">Piggy Bank</div>

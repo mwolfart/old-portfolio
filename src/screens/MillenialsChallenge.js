@@ -6,7 +6,7 @@ import mc1 from "../images/mc1.png";
 import mc2 from "../images/mc2.png";
 import mc3 from "../images/mc3.png";
 
-export const MillenialsChallenge = (props) =>
+export const MillenialsChallenge = ({ selectPageFn }) =>
     <div className="screen-content__main-panel">
         <div className="screen-content__text-panel screen-content__text-panel--left-block">
             <div className="screen-content__text-title">Millenial's Challenge</div>
@@ -25,16 +25,16 @@ export const MillenialsChallenge = (props) =>
             <img src={mc3} alt="Millenial's Challenge screenshot 3" className="image-rectangular-big" />
         </div>
         <div className="screen-content__arrow-container">
-            <button onClick={() => props.selectPageFn(MillenialsChallengePage2)} className="screen-content__arrow-button" title="Gameplay video">
+            <button onClick={() => selectPageFn(MillenialsChallengePage2)} className="screen-content__arrow-button" title="Gameplay video">
                 <FontAwesomeIcon size="3x" icon={faArrowCircleRight} fixedWidth className="screen-content__arrow-icon"/>
             </button>
         </div>
     </div>;
 
-export const MillenialsChallengePage2 = (props) =>
+export const MillenialsChallengePage2 = ({ selectPageFn }) =>
     <div className="screen-content__main-panel">
         <div className="screen-content__arrow-container">
-            <button onClick={() => props.selectPageFn(MillenialsChallenge)} className="screen-content__arrow-button" title="Project description">
+            <button onClick={() => selectPageFn(MillenialsChallenge)} className="screen-content__arrow-button" title="Project description">
                 <FontAwesomeIcon size="3x" icon={faArrowCircleLeft} fixedWidth className="screen-content__arrow-icon"/>
             </button>
         </div>

@@ -3,7 +3,7 @@ import dd1 from "../images/dd1.png";
 import dd2 from "../images/dd2.png";
 import dd3 from "../images/dd3.png";
 
-export const DangerousDave = (props) =>
+export const DangerousDave = () =>
     <div className="screen-content__main-panel">
         <div className="screen-content__text-panel screen-content__text-panel--left-block">
             <div className="screen-content__text-title">Dangerous Dave replica</div>

@@ -3,7 +3,7 @@ import pd1 from "../images/pd1.png";
 import pd2 from "../images/pd2.png";
 import pd3 from "../images/pd3.png";
 
-export const PatasDadas = (props) =>
+export const PatasDadas = () =>
     <div className="screen-content__main-panel">
         <div className="screen-content__text-panel screen-content__text-panel--left-block">
             <div className="screen-content__text-title">Patas Dadas internal system</div>

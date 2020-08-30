@@ -4,111 +4,79 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faChevronRight, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import classNames from 'classnames';
 
-const SideBarButton = (props) => {
+const SideBarButton = ({ page, clickPage }) => {
   return(
-    <button onClick={() => props.clickPage(props.page)} className="sidebar-button sidebar-button-category">
+    <button onClick={() => clickPage(page)} className="sidebar-button sidebar-button__category">
       <FontAwesomeIcon
         icon={ faChevronRight }
         fixedWidth
-        className="sidebar-category-icon-hidden"
+        className="sidebar-category__icon-hidden"
       />
-    {<div className="sidebar-category__title">{props.page.title}</div>}
+    {<div className="sidebar-category__title">{page.title}</div>}
     </button>
   );
 }
 
-const SideBarCategory = (props) => {
+const SideBarCategoryButton = ({ title, pages, clickPage }) => {
   const [expanded, setExpanded] = useState(false);
 
-  const renderCategoryPages = (pageArray) => {
-    if (!pageArray)
-      return;
+  const pageLinkList = pages.map((page) => (
+    <li key={page.title}>
+      <button 
+        className="sidebar-button sidebar-button__page-title"
+        onClick={ () => clickPage(page) }
+        >{ page.title }
+      </button>
+    </li>
+  ))
 
-    let pageElements = [];
-    for (const page of pageArray) {
-      pageElements.push(
-        <li key={page.title}>
-          <button 
-            className="sidebar-button sidebar-page__title"
-            onClick={ () => props.clickPage(page) }
-            >{ page.title }
-          </button>
-        </li>
-      );
-    }
+  const pageMenuClass = classNames({
+    "sidebar-page-menu": true,
+    "sidebar-page-menu--expanded": expanded
+  });
 
-    const pageMenuClass = classNames({
-      "sidebar-page-menu": true,
-      "sidebar-page-menu--expanded": expanded
-    });
-
-    return(
-      <ul className={ pageMenuClass }>{ pageElements }</ul>
-    );
-  }
-  
   return(
     <div>
-      <button onClick={() => setExpanded(!expanded)} className="sidebar-button sidebar-button-category">
+      <button onClick={() => setExpanded(!expanded)} className="sidebar-button sidebar-button__category">
         <FontAwesomeIcon
           icon={ (expanded ? faChevronDown : faChevronRight) }
           color="#FFFFFF"
           fixedWidth
         />
-      {<div className="sidebar-category__title">{props.title}</div>}
+      {<div className="sidebar-category__title">{title}</div>}
       </button>
-      { renderCategoryPages(props.pages) }
+      <ul className={ pageMenuClass }>{ pageLinkList }</ul>
     </div>
   );
 }
 
-export const SideBar = (props) => {
+export const SideBar = ({ menuItems, menuPageSelectFn }) => {
   const [expanded, setExpanded] = useState(false);
-  const [items, setItems] = useState([]);
 
-  const clickPage = (page) => {
-    setItems([]);
-    props.menuPageSelectFn(page);
-  }
-
-  const createItem = (item) => {
+  const createButton = (item) => {
     if (item.pages) {
       return (
-        <SideBarCategory
+        <SideBarCategoryButton
           title={item.title}
           pages={item.pages}
-          clickPage={page => clickPage(page)} 
+          clickPage={page => menuPageSelectFn(page)} 
         />
       );
     } else {
       return (
         <SideBarButton
           page={item}
-          clickPage={page => clickPage(page)} 
+          clickPage={page => menuPageSelectFn(page)} 
         />
       );
     }
   }
 
-  const createMenuItems = (categories) => {
-    // TODO this should not happen here
-    items.length = 0;
-
-    for (const category of categories) {
-      items.push(
-        <li key={category.title}>
-          { createItem(category) }
-        </li>
-      )
-    }
-  }
-
-  const toggleExpanded = () => {
-    setExpanded(!expanded);
-    setItems([]);
-  }
-
-  createMenuItems(props.menuItems);
+  const categoryBtnList = menuItems.map((category) => (
+    <li key={category.title}>
+      { createButton(category) }
+    </li>
+  ));
 
   const sideBarClass = classNames({
     "sidebar": true,
@@ -121,10 +89,10 @@ export const SideBar = (props) => {
 
   return (
     <div className={ sideBarClass }>
-      <button onClick={() => toggleExpanded()} className="sidebar-button sidebar-button-expand">
+      <button onClick={() => setExpanded(!expanded)} className="sidebar-button sidebar-button--expanded">
         <FontAwesomeIcon icon={faBars} size="2x" color="#FFFFFF" fixedWidth />
       </button>
-      <ul className={ sideBarMenuClass } >{items}</ul>
+      <ul className={ sideBarMenuClass } >{categoryBtnList}</ul>
     </div>
   );
 }

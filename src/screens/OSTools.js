@@ -1,6 +1,6 @@
 import React from "react";
 
-export const OSTools = (props) =>
+export const OSTools = () =>
     <div className="screen-content__main-panel">
         <div className="screen-content__text-panel">
             <div className="screen-content__text-title">OS Tools</div>
