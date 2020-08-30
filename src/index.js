@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./styles/themes/theme3.css";
+import "./styles/themes/theme3.scss";
 import "./index.css";
 //import App from './App';
 import * as serviceWorker from "./serviceWorker";
 
-import { MainCanvas } from './js/MainCanvas';
+import { MainCanvas } from './components/MainCanvas';
 
 ReactDOM.render(<MainCanvas />, document.getElementById("root"));
 
