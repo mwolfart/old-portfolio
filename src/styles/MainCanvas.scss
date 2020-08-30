@@ -24,6 +24,22 @@
         flex-direction: row;
         margin: 95px 250px 95px calc(250px + 65px);
         min-height: 600px;
+
+        @media (max-width: 500px) {
+            margin: 95px 0 95px calc(0 + 65px);
+        }
+
+        @media (max-width: 800px) {
+            margin: 95px 20px 95px calc(20px + 65px);
+        }
+
+        @media (max-width: 1000px) {
+            margin: 95px 100px 95px calc(100px + 65px);
+        }
+
+        @media (max-width: 1200px) {
+            margin: 95px 200px 95px calc(200px + 65px);
+        }
     }
 
     &__selected-screen {
