@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.0222621e.chunk.css",
+    "main.js": "/portfolio/static/js/main.cace1593.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.cace1593.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.8f19553e.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.8f19553e.js.map",
+    "static/js/2.2507dd7f.chunk.js": "/portfolio/static/js/2.2507dd7f.chunk.js",
+    "static/js/2.2507dd7f.chunk.js.map": "/portfolio/static/js/2.2507dd7f.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.50f5209dfa54588d5b8b851408fc395d.js": "/portfolio/precache-manifest.50f5209dfa54588d5b8b851408fc395d.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.0222621e.chunk.css.map": "/portfolio/static/css/main.0222621e.chunk.css.map",
+    "static/js/2.2507dd7f.chunk.js.LICENSE": "/portfolio/static/js/2.2507dd7f.chunk.js.LICENSE",
+    "static/media/airacers1.png": "/portfolio/static/media/airacers1.24e0d52e.png",
+    "static/media/airacers2.png": "/portfolio/static/media/airacers2.0f827bc1.png",
+    "static/media/ScreenContent.sass": "/portfolio/static/media/bg5.20123674.png",
+    "static/media/dd1.png": "/portfolio/static/media/dd1.f9fe0aee.png",
+    "static/media/dd2.png": "/portfolio/static/media/dd2.94f7f0f7.png",
+    "static/media/dd3.png": "/portfolio/static/media/dd3.ba7aa3bb.png",
+    "static/media/hcm1.png": "/portfolio/static/media/hcm1.fc3acee3.png",
+    "static/media/hcm2.png": "/portfolio/static/media/hcm2.c403e467.png",
+    "static/media/hcm3.png": "/portfolio/static/media/hcm3.d7b10304.png",
+    "static/media/mc1.png": "/portfolio/static/media/mc1.dc17bab6.png",
+    "static/media/mc2.png": "/portfolio/static/media/mc2.4234fb53.png",
+    "static/media/mc3.png": "/portfolio/static/media/mc3.fcbaedf8.png",
+    "static/media/pd1.png": "/portfolio/static/media/pd1.a33e436a.png",
+    "static/media/pd2.png": "/portfolio/static/media/pd2.1b3329bf.png",
+    "static/media/pd3.png": "/portfolio/static/media/pd3.5d2fdedb.png",
+    "static/media/profile.jpg": "/portfolio/static/media/profile.4620059a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f19553e.js",
+    "static/js/2.2507dd7f.chunk.js",
+    "static/css/main.0222621e.chunk.css",
+    "static/js/main.cace1593.chunk.js"
+  ]
+}
