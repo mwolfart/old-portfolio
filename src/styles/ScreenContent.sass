@@ -13,20 +13,20 @@
     &__main-panel 
         display: flex
         flex-direction: row
-        margin: 95px 250px 95px calc(250px + 65px)
         min-height: 600px
+        margin: 95px 0px 95px calc(0px + 65px)
 
-        @media (max-width: 1200px) 
-            margin: 95px 200px 95px calc(200px + 65px)
-
-        @media (max-width: 1000px) 
-            margin: 95px 100px 95px calc(100px + 65px)
-
-        @media (max-width: 800px) 
+        @media (min-width: 800px) 
             margin: 95px 20px 95px calc(20px + 65px)
 
-        @media (max-width: 500px) 
-            margin: 95px 0px 95px calc(0px + 65px)
+        @media (min-width: 1000px) 
+            margin: 95px 100px 95px calc(100px + 65px)
+
+        @media (min-width: 1200px) 
+            margin: 95px 200px 95px calc(200px + 65px)
+        
+        @media (min-width: 1400px) 
+            margin: 95px 250px 95px calc(250px + 65px)
 
     &__selected-screen 
         transition: opacity 0.25s ease-in 0.25s
@@ -78,29 +78,30 @@
 
     &__text-title 
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-        font-size: 32px
         font-weight: 500
-        line-height: 60px
+        font-size: 20px
+        line-height: 28px
 
-        @media (max-width: 900px) 
+        @media (min-width: 800px) 
             font-size: 28px
             line-height: 40px
 
-        @media (max-width: 500px) 
-            font-size: 20px
-            line-height: 28px
+        @media (min-width: 1000px) 
+            font-size: 32px
+            line-height: 60px
     
     &__text-description 
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-        font-size: 18px
+        font-size: 12px
         text-align: justify
         padding-bottom: 20px
 
-        @media (max-width: 900px) 
+        @media (min-width: 800px) 
             font-size: 15px
+            
+        @media (min-width: 1000px) 
+            font-size: 18px
 
-        @media (max-width: 500px) 
-            font-size: 12px
     
     &__text-video 
         text-align: center

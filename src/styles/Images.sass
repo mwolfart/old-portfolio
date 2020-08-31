@@ -1,26 +1,27 @@
 
 .image
     &--square
-        max-width: 240px
-        max-height: 240px
+        max-width: 120px
+        max-height: 120px
 
-        @media (max-width: 900px) 
+        @media (min-width: 900px) 
             max-width: 180px
             max-height: 180px
 
-        @media (max-width: 500px) 
-            max-width: 120px
-            max-height: 120px
+        @media (min-width: 1200px) 
+            max-width: 240px
+            max-height: 240px
+
 
     &--rectangular-big 
-        max-width: 320px
-        max-height: 180px
         margin: 10px 0 10px 0
+        max-width: 200px
+        max-height: 120px
 
-        @media (max-width: 900px) 
+        @media (min-width: 900px) 
             max-width: 250px
             max-height: 140px
-
-        @media (max-width: 500px) 
-            max-width: 200px
-            max-height: 120px
+            
+        @media (min-width: 1200px) 
+            max-width: 320px
+            max-height: 180px
