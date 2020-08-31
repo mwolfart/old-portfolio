@@ -1,0 +1,116 @@
+@import './themes/theme3.sass';
+
+.screen-content
+    background-color: #{$color-background}
+    background-image: url("../images/bg5.png")
+    background-repeat: no-repeat
+    background-size: cover
+    display: flex
+    width: 100%
+    flex-direction: column
+    overflow: auto
+
+    &__main-panel 
+        display: flex
+        flex-direction: row
+        margin: 95px 250px 95px calc(250px + 65px)
+        min-height: 600px
+
+        @media (max-width: 1200px) 
+            margin: 95px 200px 95px calc(200px + 65px)
+
+        @media (max-width: 1000px) 
+            margin: 95px 100px 95px calc(100px + 65px)
+
+        @media (max-width: 800px) 
+            margin: 95px 20px 95px calc(20px + 65px)
+
+        @media (max-width: 500px) 
+            margin: 95px 0px 95px calc(0px + 65px)
+
+    &__selected-screen 
+        transition: opacity 0.25s ease-in 0.25s
+        opacity: 1
+
+        &--hidden 
+            transition-delay: 0s
+            opacity: 0    
+
+    &__text-panel 
+        background-color: #{$color-background-alt}
+        padding: 20px
+        width: 100%
+        color: #{$color-text-content}
+
+        &--left-block 
+            margin-right: 20px    
+
+    &__right-panel 
+        padding: 20px
+        background-color: #{$color-background-alt}
+        display: flex
+        flex-direction: column
+        font-size: 30px
+        font-family: 'Times New Roman', Times, serif
+
+    &__arrow-container 
+        padding: 10px
+        display: flex
+        align-items: center
+
+    &__arrow-icon 
+        vertical-align: middle
+        color: #{$color-background}
+
+    &__personal-data-container 
+        display: flex
+        flex-direction: row
+
+    &__personal-data-column 
+        padding-top: 10px
+        display: flex
+        flex-direction: column
+    
+    &__personal-data-icon 
+        height: 15px
+        padding: 3px
+        font-size: 11px
+
+    &__text-title 
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        font-size: 32px
+        font-weight: 500
+        line-height: 60px
+
+        @media (max-width: 900px) 
+            font-size: 28px
+            line-height: 40px
+
+        @media (max-width: 500px) 
+            font-size: 20px
+            line-height: 28px
+    
+    &__text-description 
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        font-size: 18px
+        text-align: justify
+        padding-bottom: 20px
+
+        @media (max-width: 900px) 
+            font-size: 15px
+
+        @media (max-width: 500px) 
+            font-size: 12px
+    
+    &__text-video 
+        text-align: center
+        padding-bottom: 20px
+
+        & iframe 
+            width: 70%    
+
+    &__arrow-button 
+        background-color: Transparent
+        cursor: pointer
+        outline: none
+        border: none

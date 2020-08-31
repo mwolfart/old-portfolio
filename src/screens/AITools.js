@@ -18,8 +18,8 @@ export const AITools = ({ selectPageFn }) =>
             </div>
         </div>
         <div className="screen-content__right-panel">
-            <img src={airacers1} alt="AI Racers phase 1" className="image-rectangular-big" />
-            <img src={airacers2} alt="AI Racers phase 2" className="image-rectangular-big" />
+            <img src={airacers1} alt="AI Racers phase 1" className="image--rectangular-big" />
+            <img src={airacers2} alt="AI Racers phase 2" className="image--rectangular-big" />
         </div>
         <div className="screen-content__arrow-container">
             <button onClick={() => selectPageFn(AIToolsPage2)} className="screen-content__arrow-button" title="Next">

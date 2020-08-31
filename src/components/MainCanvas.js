@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import "../styles/MainCanvas.scss";
-import { SideBar } from "./SideBar";
 import classNames from 'classnames';
 
+import "../styles/MainCanvas.sass";
+import "../styles/ScreenContent.sass";
+import "../styles/Images.sass";
+
+import { SideBar } from "./SideBar";
 import { ScreenList } from "../screens/ScreenList";
 import { Home } from "../screens/Home";
 

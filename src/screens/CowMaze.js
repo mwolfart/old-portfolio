@@ -21,8 +21,8 @@ export const CowMaze = () =>
             </div>
         </div>
         <div className="screen-content__right-panel">
-            <img src={hcm1} alt="Homogeneous Cow Maze screenshot 1" className="image-rectangular-big" />
-            <img src={hcm2} alt="Homogeneous Cow Maze screenshot 2" className="image-rectangular-big" />
-            <img src={hcm3} alt="Homogeneous Cow Maze screenshot 3" className="image-rectangular-big" />
+            <img src={hcm1} alt="Homogeneous Cow Maze screenshot 1" className="image--rectangular-big" />
+            <img src={hcm2} alt="Homogeneous Cow Maze screenshot 2" className="image--rectangular-big" />
+            <img src={hcm3} alt="Homogeneous Cow Maze screenshot 3" className="image--rectangular-big" />
         </div>
     </div>;

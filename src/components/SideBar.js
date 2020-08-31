@@ -1,18 +1,19 @@
 import React, { useState } from "react";
-import "../styles/SideBar.scss";
+import classNames from 'classnames';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faChevronRight, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import classNames from 'classnames';
+
+import "../styles/SideBar.sass";
 
 const SideBarButton = ({ page, clickPage }) => {
   return(
-    <button onClick={() => clickPage(page)} className="sidebar-button sidebar-button__category">
+    <button onClick={() => clickPage(page)} className="sidebar__button sidebar__button--category">
       <FontAwesomeIcon
         icon={ faChevronRight }
         fixedWidth
-        className="sidebar-category__icon-hidden"
+        className="sidebar__category-icon-hidden"
       />
-    {<div className="sidebar-category__title">{page.title}</div>}
+    {<div className="sidebar__category-title">{page.title}</div>}
     </button>
   );
 }
@@ -23,7 +24,7 @@ const SideBarCategoryButton = ({ title, pages, clickPage }) => {
   const pageLinkList = pages.map((page) => (
     <li key={page.title}>
       <button 
-        className="sidebar-button sidebar-button__page-title"
+        className="sidebar__button sidebar__button--page"
         onClick={ () => clickPage(page) }
         >{ page.title }
       </button>
@@ -31,19 +32,19 @@ const SideBarCategoryButton = ({ title, pages, clickPage }) => {
   ))
 
   const pageMenuClass = classNames({
-    "sidebar-page-menu": true,
-    "sidebar-page-menu--expanded": expanded
+    "sidebar__page-menu": true,
+    "sidebar__page-menu--expanded": expanded
   });
 
   return(
     <div>
-      <button onClick={() => setExpanded(!expanded)} className="sidebar-button sidebar-button__category">
+      <button onClick={() => setExpanded(!expanded)} className="sidebar__button sidebar__button--category">
         <FontAwesomeIcon
           icon={ (expanded ? faChevronDown : faChevronRight) }
           color="#FFFFFF"
           fixedWidth
         />
-      {<div className="sidebar-category__title">{title}</div>}
+      {<div className="sidebar__category-title">{title}</div>}
       </button>
       <ul className={ pageMenuClass }>{ pageLinkList }</ul>
     </div>
@@ -83,13 +84,13 @@ export const SideBar = ({ menuItems, menuPageSelectFn }) => {
     "sidebar--expanded": expanded
   });
   const sideBarMenuClass = classNames({
-    "sidebar-menu": true,
-    "sidebar-menu--expanded": expanded
+    "sidebar__menu": true,
+    "sidebar__menu--expanded": expanded
   });
 
   return (
     <div className={ sideBarClass }>
-      <button onClick={() => setExpanded(!expanded)} className="sidebar-button sidebar-button--expanded">
+      <button onClick={() => setExpanded(!expanded)} className="sidebar__button sidebar__button--expanded">
         <FontAwesomeIcon icon={faBars} size="2x" color="#FFFFFF" fixedWidth />
       </button>
       <ul className={ sideBarMenuClass } >{categoryBtnList}</ul>

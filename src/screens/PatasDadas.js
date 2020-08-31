@@ -20,8 +20,8 @@ export const PatasDadas = () =>
             </div>
         </div>
         <div className="screen-content__right-panel">
-            <img src={pd1} alt="Patas Dadas internal system screenshot 1" className="image-rectangular-big" />
-            <img src={pd2} alt="Patas Dadas internal system screenshot 2" className="image-rectangular-big" />
-            <img src={pd3} alt="Patas Dadas internal system screenshot 3" className="image-rectangular-big" />
+            <img src={pd1} alt="Patas Dadas internal system screenshot 1" className="image--rectangular-big" />
+            <img src={pd2} alt="Patas Dadas internal system screenshot 2" className="image--rectangular-big" />
+            <img src={pd3} alt="Patas Dadas internal system screenshot 3" className="image--rectangular-big" />
         </div>
     </div>;

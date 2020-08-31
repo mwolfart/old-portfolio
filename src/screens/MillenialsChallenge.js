@@ -20,9 +20,9 @@ export const MillenialsChallenge = ({ selectPageFn }) =>
             </div>
         </div>
         <div className="screen-content__right-panel">
-            <img src={mc1} alt="Millenial's Challenge screenshot 1" className="image-rectangular-big" />
-            <img src={mc2} alt="Millenial's Challenge screenshot 2" className="image-rectangular-big" />
-            <img src={mc3} alt="Millenial's Challenge screenshot 3" className="image-rectangular-big" />
+            <img src={mc1} alt="Millenial's Challenge screenshot 1" className="image--rectangular-big" />
+            <img src={mc2} alt="Millenial's Challenge screenshot 2" className="image--rectangular-big" />
+            <img src={mc3} alt="Millenial's Challenge screenshot 3" className="image--rectangular-big" />
         </div>
         <div className="screen-content__arrow-container">
             <button onClick={() => selectPageFn(MillenialsChallengePage2)} className="screen-content__arrow-button" title="Gameplay video">
@@ -44,7 +44,7 @@ export const MillenialsChallengePage2 = ({ selectPageFn }) =>
                 Below is a video showing the gameplay of Millenial's Challenge level 01. Gameplay videos for level 02 and 03 can be found <a href="https://youtu.be/GuPiVk4cFJg">here</a> and <a href="https://youtu.be/jyRXoygfuSY">here</a>, respectively.
             </div>
             <div className="screen-content__text-video">
-                <iframe width="560" height="250" src="https://www.youtube.com/embed/XQX37-c8pZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe title="Millenial's Challenge video" width="560" height="250" src="https://www.youtube.com/embed/XQX37-c8pZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div className="screen-content__text-title">Repository & download</div>
             <div className="screen-content__text-description">

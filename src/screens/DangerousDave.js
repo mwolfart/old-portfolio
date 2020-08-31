@@ -20,8 +20,8 @@ export const DangerousDave = () =>
             </div>
         </div>
         <div className="screen-content__right-panel">
-            <img src={dd1} alt="Dangerous Dave screenshot 1" className="image-rectangular-big" />
-            <img src={dd2} alt="Dangerous Dave screenshot 2" className="image-rectangular-big" />
-            <img src={dd3} alt="Dangerous Dave screenshot 3" className="image-rectangular-big" />
+            <img src={dd1} alt="Dangerous Dave screenshot 1" className="image--rectangular-big" />
+            <img src={dd2} alt="Dangerous Dave screenshot 2" className="image--rectangular-big" />
+            <img src={dd3} alt="Dangerous Dave screenshot 3" className="image--rectangular-big" />
         </div>
     </div>;
